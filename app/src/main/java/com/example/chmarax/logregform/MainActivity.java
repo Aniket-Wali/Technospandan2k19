@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.chmarax.logregform.Cultural.CulturalEvents;
+import com.example.chmarax.logregform.Sports.SportsEvents;
 import com.example.chmarax.logregform.Technical.TechnicalEvents;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -81,7 +82,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 3 : break;
 
-                    case 4 : break;
+                    case 4 :
+                        startActivity(new Intent(MainActivity.this, SportsEvents.class));
+                        Toast.makeText(getApplicationContext(),"Sports Events",Toast.LENGTH_LONG).show();
+                        break;
                 }
             }
         });

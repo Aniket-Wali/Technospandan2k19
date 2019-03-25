@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/logo_noshadow"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sports.SportsEvents"></activity>
+
+
+        <activity android:name=".Sports.SportsEvents" />
         <activity android:name=".Cultural.CulturalEvents" />
         <activity android:name=".Technical.TechnicalEvents" />
         <activity android:name=".MainActivity" />
@@ -27,6 +29,14 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".PWresetActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
     </application>
 
 </manifest>
